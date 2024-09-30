@@ -20,6 +20,9 @@ public class Main {
     System.out.println("Max: " + Lab1.max(3, 4));
     System.out.println("Average: " + Lab1.average(4, 6));
     System.out.println("Sum: " + Lab1.sum(10,6));
+    int[] x = new int[3];
+    System.out.println("x[0] is " + x[0]);
+
   }
 
 }     
