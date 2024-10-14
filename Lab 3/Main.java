@@ -5,16 +5,16 @@ public class Main {
     String bestCase = "A";
 
     // * Initialize startTime here
-    long startTime = System.currentTimeMillis(); 
+    long startTime = System.nanoTime(); 
 
     int index = match(text, bestCase);
     // * Initialize endTime here
-    long endTime = System.currentTimeMillis(); 
+    long endTime = System.nanoTime(); 
     // * Calculate elapsedTime here
     long elapsedTime = endTime - startTime;
 
     if (index >= 0) {
-      System.out.println("best-case input matched in " + elapsedTime + " miliseconds");
+      System.out.println("best-case input matched in " + elapsedTime + " nanoseconds");
       System.out.println("best-case input matched at index " + index);
     }
     else {
@@ -23,17 +23,17 @@ public class Main {
     String worstCase = "9";
     
     // * Initialize startTime here
-    startTime = System.currentTimeMillis(); 
+    startTime = System.nanoTime(); 
 
     index = match(text, worstCase);
     // * Initialize endTime here
-    endTime = System.currentTimeMillis();
+    endTime = System.nanoTime();
     // * Calculate elapsedTime here
     elapsedTime = endTime - startTime;
 
 
     if (index >= 0) {
-      System.out.println("worst-case input matched in " + elapsedTime + " miliseconds");
+      System.out.println("worst-case input matched in " + elapsedTime + " nanoseconds");
       System.out.println("worst-case input matched at index " + index);
     } else {
       System.out.println("worst-case input unmatched");  
