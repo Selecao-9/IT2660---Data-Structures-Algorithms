@@ -12,13 +12,14 @@ public class Main {
     long endTime = System.currentTimeMillis(); 
     // * Calculate elapsedTime here
     long elapsedTime = endTime - startTime;
-    System.out.println("best-case matched in " + elapsedTime + " miliseconds");
 
-    if (index >= 0)
+    if (index >= 0) {
+      System.out.println("best-case input matched in " + elapsedTime + " miliseconds");
       System.out.println("best-case input matched at index " + index);
-    else
+    }
+    else {
       System.out.println("best-case input unmatched");   
-
+    }
     String worstCase = "9";
     
     // * Initialize startTime here
@@ -26,16 +27,17 @@ public class Main {
 
     index = match(text, worstCase);
     // * Initialize endTime here
-    endTime = System.currentTimeMillis() 
+    endTime = System.currentTimeMillis();
     // * Calculate elapsedTime here
     elapsedTime = endTime - startTime;
-    System.out.println("worst-case matched in " + elapsedTime + " miliseconds");
 
 
-    if (index >= 0)
+    if (index >= 0) {
+      System.out.println("worst-case input matched in " + elapsedTime + " miliseconds");
       System.out.println("worst-case input matched at index " + index);
-    else
+    } else {
       System.out.println("worst-case input unmatched");  
+    }
   }
 
   // Return the index of the first match. -1 otherwise.
