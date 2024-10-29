@@ -22,7 +22,7 @@ public class Main {
 class Lab4 {
   public static ArrayList<Integer> insertionSort(ArrayList<Integer> integerList) {
     // Step 1 - Implement insertion sort algorithm here
-
+    for (int i = 0; i < integerList.size(); i++)
     return integerList;
   }
 

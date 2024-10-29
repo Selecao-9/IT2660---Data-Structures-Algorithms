@@ -2,7 +2,8 @@
     "java.project.sourcePaths": [
         "Lab 3",
         "Lab 2",
-        "Lab 1"
+        "Lab 1",
+        "Lab 4"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
