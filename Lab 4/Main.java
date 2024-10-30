@@ -9,6 +9,8 @@ public class Main {
       ArrayList<Integer> integerList = Lab4.getList();
       Lab4.outputList(integerList);
 
+      // 1. "If you were implementing a sort algorithm for a new language, which sort would you use?"
+      // I would use an insert method algorithm since it runs quicker and easier. 
       long beginTime = System.currentTimeMillis();
       System.out.println("\n\nBubble sort results ----------------------------------------------");
       ArrayList<Integer> bubbleSortedList = Lab4.bubbleSort(integerList);
@@ -16,7 +18,9 @@ public class Main {
       long finishTime = System.currentTimeMillis();
       long elapse = finishTime - beginTime;
       System.out.println("\n" + elapse + " miliseconds elapsed.");
-
+      
+      // 2. "Was there a difference in the time it took for bubble and insertion sort to run? Does this make sense given the time complexities for these sorting algorithms?""
+      // Bubble sort took significantly more miliseconds to run, which makes sense because insertion sort can move a given entry many more spaces to the left per iteration.
       beginTime = System.currentTimeMillis();
       System.out.println("\n\nInsertion sort results -------------------------------------------");
       ArrayList<Integer> insertionSortedList = Lab4.insertionSort(integerList);
@@ -24,6 +28,9 @@ public class Main {
       finishTime = System.currentTimeMillis();
       elapse = finishTime - beginTime;
       System.out.println("\n" + elapse + " miliseconds elapsed.");
+
+      // 3. "Which sort algorithm has an easier implemenation (in terms of understanding) to you?"
+      // Insertion sort was the easier to conceptualize for me.
     }
 }
 
