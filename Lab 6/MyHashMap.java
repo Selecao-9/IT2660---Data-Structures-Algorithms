@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class MyHashMap<K, V> implements MyMap<K, V> {
     // Define the default hash table size. Must be a power of 2
@@ -35,6 +37,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     
     /** Construct a map with the specified initial capacity 
      * and load factor */
+    @SuppressWarnings("unchecked")
     public MyHashMap(int initialCapacity, float loadFactorThreshold) { 
       if (initialCapacity > MAXIMUM_CAPACITY)
         this.capacity = MAXIMUM_CAPACITY;
@@ -42,7 +45,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
         this.capacity = trimToPowerOf2(initialCapacity);
       
       this.loadFactorThreshold = loadFactorThreshold;    
-      table = new LinkedList[capacity];
+      table = (LinkedList<Entry<K, V>>[]) new LinkedList[capacity]; // Create a new hash table
     }
     
     @Override /** Remove all of the entries from this map */ 
@@ -227,15 +230,16 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     }
     
     /** Rehash the map */
+    @SuppressWarnings("unchecked")
     private void rehash() {
-      java.util.Set<Entry<K, V>> set = entrySet(); // Get entries
-      capacity <<= 1; // Double capacity    
-      table = new LinkedList[capacity]; // Create a new hash table
-      size = 0; // Reset size to 0
-      
-      for (Entry<K, V> entry: set) {
-        put(entry.getKey(), entry.getValue()); // Store to new table
-      }
+        java.util.Set<Entry<K, V>> set = entrySet(); // Get entries
+        capacity <<= 1; // Double capacity    
+        table = (LinkedList<Entry<K, V>>[]) new LinkedList[capacity]; // Create a new hash table
+        size = 0; // Reset size to 0
+
+        for (Entry<K, V> entry : set) {
+            put(entry.getKey(), entry.getValue()); // Store to new table
+        }
     }
   
     @Override
